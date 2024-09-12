@@ -61,5 +61,5 @@ MVPリリース時に実装予定の機能
 記録機能: Ruby on RailsのActiveRecordを使用してデータベースに保存し、フォームのバリデーションにはRailsの標準機能を活用します。
 データ共有機能: ActionCableを用いたリアルタイム更新や、ユーザー認証にはDevise、もしくはsorceryを利用して安全にデータ共有を実現します。
 
-## ER図
-https://drive.google.com/file/d/1E-UrsVOR57ZwtpVYlijKNuKgjKx_jnGY/view?usp=sharing
+## ER図の作成
+https://gyazo.com/9c4587bec7f118a4db77bbd36bb22519
