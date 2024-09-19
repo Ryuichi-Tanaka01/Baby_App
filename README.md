@@ -62,4 +62,4 @@ MVPリリース時に実装予定の機能
 データ共有機能: ActionCableを用いたリアルタイム更新や、ユーザー認証にはDevise、もしくはsorceryを利用して安全にデータ共有を実現します。
 
 ## ER図の作成
-https://gyazo.com/78a90d0572c6ac55923ec8470508b6b6
+https://gyazo.com/33942f0134ed9b01a5ef43ddc377ecbe
