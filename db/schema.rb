@@ -10,11 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_03_131144) do
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.string "body"
+ActiveRecord::Schema[7.2].define(version: 2024_10_05_053415) do
+  create_table "flight_categories", force: :cascade do |t|
+    t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "recorders", force: :cascade do |t|
+    t.string "name", limit: 255, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "records", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "breastmilk_amount"
+    t.boolean "has_urinated"
+    t.integer "flight_category_id", null: false
+    t.string "remarks", limit: 255
+    t.integer "recorder_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_records_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", null: false
+    t.string "crypted_password"
+    t.string "salt"
+    t.string "name", limit: 255
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+  end
+
+  add_foreign_key "records", "recorders"
+  add_foreign_key "records", "users"
 end
