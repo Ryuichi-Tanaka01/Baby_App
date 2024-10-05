@@ -1,15 +1,65 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+    background-image: url('pastel.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 中央揃え */
+}
+
+
+.memory-image {
+    width: 50%; /* 必要に応じてサイズを調整 */
+    max-width: 200px; /* 最大幅を設定（必要に応じて変更） */
+    height: auto; /* 高さを自動調整 */
+    margin: 20px 0; /* 上下に余白を追加 */
+}
+
+.top-image {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.text-section {
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: #333;
+    width: 100%; /* 100%にして左右の余白をなくす */
+    line-height: 1.6em;
+    text-align: center; /* 中央揃え */
+    margin-left: auto; /* 左右中央揃え */
+    margin-right: auto; /* 左右中央揃え */
+}
+
+.button-row {
+    display: flex;
+    justify-content: center; /* 中央に配置 */
+    margin-top: 40px; /* ボタンの上の余白 */
+}
+
+.button-row a {
+    display: inline-block;
+    margin: 0 30px; /* 左右に30pxのスペースを追加 */
+}
+
+.button-row img {
+    width: 200px; /* ボタンのサイズ */
+    height: auto;
+    cursor: pointer;
+}

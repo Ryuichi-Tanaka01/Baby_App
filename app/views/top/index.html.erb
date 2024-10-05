@@ -1,9 +1,25 @@
-<h1>Top</h1>
+<div class="container">
+  <div class="top-image">
+    <%= image_tag 'memory.png', alt: 'Memory', class: 'memory-image' %>
+  </div>
 
-<ul>
-  <% @users.each do |user| %>
-    <li>
-      <strong><%= user.name %></strong>: <%= user.name %>
-    </li>
-  <% end %>
-</ul>
+  <!-- 文章を入れるスペース -->
+  <div class="text-section">
+    <p>「大切な時間を、やさしく記録。」<br>
+       毎日の育児をもっと楽しく、もっとシンプルに。<br>
+       可愛いパステルカラーの育児記録帳で、赤ちゃんの成長をしっかりと残していきましょう。</p>
+    <p>忙しいママやパパでも簡単に使える、<br>
+       使いやすさと見やすさを追求したデザインです。<br>
+       赤ちゃんとの大切な思い出を、いつでも振り返られるように。</p>
+  </div>
+
+  <!-- ボタンエリア -->
+  <div class="button-row">
+    <a href="/login">
+      <%= image_tag 'login.png', alt: 'ログイン' %>
+    </a>
+    <a href="/signup">
+      <%= image_tag 'new.png', alt: '新規登録' %>
+    </a>
+  </div>
+</div>
