@@ -1,0 +1,25 @@
+<%= render 'shared/header' %>
+<% if logged_in? %>
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <td>日時</td>
+          <td>記録した人</td>
+          <td>うんち</td>
+          <td>みるく</td>
+          <td>おしっこ</td>
+          <td>備考</td>
+          <td></td>
+        </tr>
+        <% @record.each do |record| %>
+          <tr>
+            <td><%= record.created_at.strftime('%Y/%m/%d %H:%M:')%></td>
+            <td><%= record.recorder.name %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>
+</div>
