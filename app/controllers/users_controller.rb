@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     puts params.inspect
     @user = User.new(user_params)
     if @user.save
+      session[:user_id] = @user.id
       redirect_to "/users/page"
     else
       puts @user.errors.full_messages
