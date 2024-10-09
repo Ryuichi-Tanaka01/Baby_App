@@ -1,0 +1,52 @@
+body {
+    background-image: url(/assets/pastel-3aa1bd3aa269e0fef6a0b96a34c71ef7524267a444ad39ef374cfd6dc70b1818.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+    position: relative;  /* 絶対配置の基準となる */
+    display: block;  /* FlexboxやGridの影響を排除 */
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.memory-image {
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 150px;  /* 画像サイズを調整 */
+    height: auto;
+    z-index: 100;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.button-row a {
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.button-row img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+}
+
+.button-row a:hover img {
+    opacity: 0.8;
+}
+
+.memory-image-small {
+    left: 0;
+    width: 100px;  /* 画像サイズを調整 */
+    height: auto;
+}

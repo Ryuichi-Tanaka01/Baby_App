@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-auto">
+      <h1>ユーザー登録</h1>
+      <%= form_with model: @user, url: users_path, local: true do |f| %>
+        <div class="mb-3">
+        <div>
+          <%= f.label :ユーザ名, class: "form-label" %>
+          </div>
+          <div>
+          <%= f.text_field :name, class: "form-control" %>
+          </div>
+        </div>
+        <div class="mb-3">
+        <div>
+          <%= f.label :メールアドレス, class: "form-label" %>
+        </div>
+        <div>
+          <%= f.email_field :email, class: "form-control" %>
+        </div>
+          </div>
+        <div class="mb-3">
+        <div>
+          <%= f.label :パスワード, class: "form-label" %>
+        </div>
+        <div>
+          <%= f.password_field :password, class: "form-control" %>
+        </div>
+        </div>
+        <div class="mb-3">
+
+        <%= f.submit "登録", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

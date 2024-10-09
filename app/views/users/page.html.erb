@@ -1,0 +1,5 @@
+<%= render 'shared/header' %>
+<div class="center-content">
+    <%= link_to image_tag('write.png', alt: '記録をつける', class: 'center-image'), '/users/write_create', class: 'image-link' %>
+    <%= link_to image_tag('hyouji.png', alt: '記録を表示', class: 'center-image'), user_path(@user.id), class: 'image-link' %>
+</div>

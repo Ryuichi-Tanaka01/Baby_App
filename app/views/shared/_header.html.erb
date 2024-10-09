@@ -1,0 +1,10 @@
+<div class="memory-image-container">
+  <div class="memory-image-small">
+    <%= link_to image_tag("memory.png", class: "memory-image-small"), "/users/page" %>
+  </div>
+
+  <% if logged_in? %>
+  <h3><%= @user.name %>さん、こんにちは！今日も記録をつけていきましょう!</h3>
+    <%= link_to image_tag('logout', class: "image-size"), logout_path, method: :delete, class: "logout-button" %>
+  <% end %>
+</div>
