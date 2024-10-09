@@ -19745,3 +19745,101 @@ Started GET "/manifest.json" for 127.0.0.1 at 2024-10-10 06:23:25 +0900
   
 ActionController::RoutingError (No route matches [GET] "/manifest.json"):
   
+Started GET "/" for 127.0.0.1 at 2024-10-10 06:43:14 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 44.0ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 50.8ms | GC: 0.6ms)
+Completed 200 OK in 67ms (Views: 53.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/manifest.json" for 127.0.0.1 at 2024-10-10 06:43:14 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/manifest.json"):
+  
+Started GET "/login" for 127.0.0.1 at 2024-10-10 06:43:17 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 10.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | GC: 8.6ms)
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 8.6ms)
+
+
+Started GET "/manifest.json" for 127.0.0.1 at 2024-10-10 06:43:17 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/manifest.json"):
+  
+Started GET "/manifest.json" for 127.0.0.1 at 2024-10-10 06:43:19 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/manifest.json"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2024-10-10 06:43:20 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | GC: 0.0ms)
+Completed 200 OK in 80ms (Views: 8.0ms | ActiveRecord: 1.3ms (0 queries, 0 cached) | GC: 4.9ms)
+
+
+Started GET "/manifest.json" for 127.0.0.1 at 2024-10-10 06:43:20 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/manifest.json"):
+  
+Started POST "/users" for 127.0.0.1 at 2024-10-10 06:43:34 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"namae", "email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"登録"}
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "namae@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "crypted_password", "salt", "name", "created_at", "updated_at", "password_digest", "reset_password_token", "reset_password_token_expires_at", "reset_password_email_sent_at", "access_count_to_reset_password_page") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "namae@gmail.com"], ["crypted_password", "$2a$10$0W5bwUeIaJ3yQpOP/8B8t.jkSEyyGZfB9P89lVrGcBde3HcI.crhi"], ["salt", "q6g_EqChmzyCyyW1aKvc"], ["name", "namae"], ["created_at", "2024-10-09 21:43:34.606538"], ["updated_at", "2024-10-09 21:43:34.606538"], ["password_digest", nil], ["reset_password_token", nil], ["reset_password_token_expires_at", nil], ["reset_password_email_sent_at", nil], ["access_count_to_reset_password_page", 0]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/users/page
+Completed 302 Found in 89ms (ActiveRecord: 6.1ms (2 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/users/page" for 127.0.0.1 at 2024-10-10 06:43:34 +0900
+Processing by UsersController#page as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `page'
+  Rendering layout layouts/application.html.erb
+  Rendering users/page.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 2.8ms | GC: 0.1ms)
+  Rendered users/page.html.erb within layouts/application (Duration: 5.0ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | GC: 0.1ms)
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 0.8ms (2 queries, 1 cached) | GC: 0.1ms)
+
+
+Started GET "/manifest.json" for 127.0.0.1 at 2024-10-10 06:43:34 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/manifest.json"):
+  
+Started GET "/logout" for 127.0.0.1 at 2024-10-10 06:43:38 +0900
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 8ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-10 06:43:38 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | GC: 0.4ms)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/manifest.json" for 127.0.0.1 at 2024-10-10 06:43:38 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/manifest.json"):
+  
