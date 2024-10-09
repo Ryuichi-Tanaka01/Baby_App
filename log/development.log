@@ -19843,3 +19843,51 @@ Started GET "/manifest.json" for 127.0.0.1 at 2024-10-10 06:43:38 +0900
   
 ActionController::RoutingError (No route matches [GET] "/manifest.json"):
   
+Started GET "/" for 127.0.0.1 at 2024-10-10 07:04:51 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 43.8ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 49.6ms | GC: 0.5ms)
+Completed 200 OK in 63ms (Views: 52.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-10 07:04:52 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 8.5ms | GC: 1.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | GC: 3.9ms)
+Completed 200 OK in 102ms (Views: 13.8ms | ActiveRecord: 1.1ms (0 queries, 0 cached) | GC: 18.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-10-10 07:05:12 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"namaee", "email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "commit"=>"登録"}
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (5.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "namaee@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "crypted_password", "salt", "name", "created_at", "updated_at", "password_digest", "reset_password_token", "reset_password_token_expires_at", "reset_password_email_sent_at", "access_count_to_reset_password_page") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "namaee@gmail.com"], ["crypted_password", "$2a$10$67V6WVSln/l.IVU6epAkYed/1PDIGD6d4gCptyiv8GZETzcOXkuxC"], ["salt", "7tHkBys_fi_rUzhfBvaT"], ["name", "namaee"], ["created_at", "2024-10-09 22:05:12.219015"], ["updated_at", "2024-10-09 22:05:12.219015"], ["password_digest", nil], ["reset_password_token", nil], ["reset_password_token_expires_at", nil], ["reset_password_email_sent_at", nil], ["access_count_to_reset_password_page", 0]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/users/page
+Completed 302 Found in 96ms (ActiveRecord: 7.9ms (2 queries, 0 cached) | GC: 6.5ms)
+
+
+Started GET "/users/page" for 127.0.0.1 at 2024-10-10 07:05:12 +0900
+Processing by UsersController#page as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `page'
+  Rendering layout layouts/application.html.erb
+  Rendering users/page.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 4.0ms | GC: 0.1ms)
+  Rendered users/page.html.erb within layouts/application (Duration: 6.3ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | GC: 0.1ms)
+Completed 200 OK in 14ms (Views: 8.7ms | ActiveRecord: 0.9ms (2 queries, 1 cached) | GC: 0.1ms)
+
+
