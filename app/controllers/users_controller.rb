@@ -4,24 +4,30 @@ class UsersController < ApplicationController
   end
 
   def create
-    puts params.inspect
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
       redirect_to "/users/page"
     else
-      puts @user.errors.full_messages
+      flash.now[:alert] = @user.errors.full_messages.to_sentence
       render :new
     end
   end
 
-  def write_crete
+  def write_create
     user_id = current_user.id
-    @record = Record.new
+    @record = Record.new(recorder_id: user_id)
+  
+    if @record.save
+      redirect_to users_path, notice: 'Record was successfully created.'
+    else
+      render :write_create 
+    end
   end
+  
 
   def page
-    @user = User.find_by(id: session[:user_id])
+    @user = current_user
   end
 
   def show
@@ -33,5 +39,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :password)
+  end
+
+  def current_user
+    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
   end
 end
