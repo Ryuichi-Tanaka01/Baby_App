@@ -24,6 +24,15 @@
             <td style="padding: 12px; text-align: left; border: 1px solid lightblue;">
               <%= record.flight_category.color %>
             </td>
+            <td style="padding: 12px; text-align: left; border: 1px solid lightblue;">
+              <%= record.breastmilk_amount%>
+            </td>
+            <td style="padding: 12px; text-align: left; border: 1px solid lightblue;">
+            <%= record.has_urinated ? "した" : "していない" %>
+            </td>
+            <td style="padding: 12px; text-align: left; border: 1px solid lightblue;">
+              <%= record.remarks %>
+            </td>
           </tr>
         <% end %>
       </tbody>

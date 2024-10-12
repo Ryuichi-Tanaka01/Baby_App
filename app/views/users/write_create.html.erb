@@ -2,7 +2,6 @@
   <%= form.hidden_field :user_id, value: current_user.id %>
 
   <div class="write_center">
-    <!-- recorder_idのhuman group -->
     <div class="human group">
       <div class="radio-image-group">
         <%= image_tag("chichi", size: "100") %>
@@ -16,43 +15,71 @@
         <%= image_tag("sohu", size: "100") %>
         <%= form.radio_button :recorder_id, Recorder.find_by(name: "そふ").id %>
       </div>
+    </div>
+  </div>
+
+  <div class="write_center">
+    <div class="human group">
       <div class="radio-image-group">
         <%= image_tag("imouto", size: "100") %>
         <%= form.radio_button :recorder_id, Recorder.find_by(name: "いもうと").id %>
       </div>
-    </div>
-
-    <div class="back-color group">
-      <div class="radio-image-group2">
-        <%= image_tag("cha", size: "100") %>
-        <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "ちゃいろ").id %>
+      <div class="radio-image-group">
+        <%= image_tag("haha", size: "100") %>
+        <%= form.radio_button :recorder_id, Recorder.find_by(name: "はは").id %>
       </div>
-      <div class="radio-image-group2">
-        <%= image_tag("green", size: "100") %>
-        <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "みどりいろ").id %>
+      <div class="radio-image-group">
+        <%= image_tag("sobo", size: "100") %>
+        <%= form.radio_button :recorder_id, Recorder.find_by(name: "そぼ").id %>
       </div>
-      <div class="radio-image-group2">
-        <%= image_tag("ao", size: "100") %>
-        <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "あお").id %>
-      </div>
-    </div>
-    <div class="back-color group">
-      <div class="radio-image-group2">
-        <%= image_tag("pink", size: "100") %>
-        <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "ぴんく").id %>
-      </div>
-      <div class="radio-image-group2">
-        <%= image_tag("yellow", size: "100") %>
-        <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "きいろ").id %>
-      </div>
-      <div class="radio-image-group2">
-        <%= image_tag("murasaki", size: "100") %>
-        <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "むらさき").id %>
-      </div>
-    </div>
-
-    <div class="button-create">
-      <%= form.submit "きろくする" %>
     </div>
   </div>
+
+  <div class="back-color group">
+    <div class="radio-image-group2">
+      <%= image_tag("cha", size: "100") %>
+      <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "ちゃいろ").id %>
+    </div>
+    <div class="radio-image-group2">
+      <%= image_tag("green", size: "100") %>
+      <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "みどりいろ").id %>
+    </div>
+    <div class="radio-image-group2">
+      <%= image_tag("ao", size: "100") %>
+      <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "あお").id %>
+    </div>
+  </div>
+
+  <div class="back-color group">
+    <div class="radio-image-group2">
+      <%= image_tag("pink", size: "100") %>
+      <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "ぴんく").id %>
+    </div>
+    <div class="radio-image-group2">
+      <%= image_tag("yellow", size: "100") %>
+      <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "きいろ").id %>
+    </div>
+    <div class="radio-image-group2">
+      <%= image_tag("murasaki", size: "100") %>
+      <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "むらさき").id %>
+    </div>
+  </div>
+  <div class="form-group">
+  <%= form.label :has_urinated, "おしっこをしたかどうか" %>
+  <%= form.check_box :has_urinated %>
+</div>
+  <div class="text_form">
+  <%= form.label :breastmilk_amount, "ミルク量" %>
+  <%= form.number_field :breastmilk_amount, placeholder: "ミルク量を入力", min: 0, step: 1 %>
+</div>
+  <div class="text_form">
+  <%= form.text_field :remarks, size: 50, placeholder: "備考" %>
+</div>
+
+  <div class="button-create">
+    <%= button_tag(type: 'submit', style: "background: none; border: none; padding: 0;") do %>
+      <%= image_tag("sousin.png", alt: "きろくする", style: "width: 130px; height: auto;") %>
+    <% end %>
+  </div>
+
 <% end %>

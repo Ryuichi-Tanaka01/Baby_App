@@ -39,7 +39,9 @@ body {
 .radio-image-group3 img {
     margin-bottom: 5px; 
 }
-
+.text_form{
+    text-align: center;
+}
 /* ボタン */
 .button-create {
     text-align: center;
