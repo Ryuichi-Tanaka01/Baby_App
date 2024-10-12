@@ -36361,3 +36361,732 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.2ms (5 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2024-10-12 22:56:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 58.3ms | GC: 13.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 72.8ms | GC: 19.3ms)
+Completed 200 OK in 88ms (Views: 75.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 19.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 22:56:10 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 11.8ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | GC: 0.4ms)
+Completed 200 OK in 23ms (Views: 18.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 22:56:44 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | GC: 0.1ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 22:58:22 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 0.1ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-10-12 22:58:26 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"[FILTERED]", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 71ms (Views: 5.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-10-12 23:01:55 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"[FILTERED]", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.8ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 1.1ms)
+Completed 200 OK in 19ms (Views: 6.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 6.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-10-12 23:04:58 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"[FILTERED]", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "app/assets/images/login.png" is not present in the asset pipeline.
+):
+
+Causes:
+Sprockets::Rails::Helper::AssetNotFound (The asset "app/assets/images/login.png" is not present in the asset pipeline.
+)
+    10:     </div>
+    11:   
+    12:     <div style="text-align: center;">
+    13:       <%= f.submit image_tag('app/assets/images/login.png', alt: 'ログイン'), class: 'login-button' %>
+    14:     </div>
+    15:   <% end %>
+    16:   
+  
+app/views/sessions/new.html.erb:13
+app/views/sessions/new.html.erb:1
+app/controllers/sessions_controller.rb:10:in `create'
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:05:09 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+  
+ActionView::Template::Error (The asset "app/assets/images/login.png" is not present in the asset pipeline.
+):
+
+Causes:
+Sprockets::Rails::Helper::AssetNotFound (The asset "app/assets/images/login.png" is not present in the asset pipeline.
+)
+    10:     </div>
+    11:   
+    12:     <div style="text-align: center;">
+    13:       <%= f.submit image_tag('app/assets/images/login.png', alt: 'ログイン'), class: 'login-button' %>
+    14:     </div>
+    15:   <% end %>
+    16:   
+  
+app/views/sessions/new.html.erb:13
+app/views/sessions/new.html.erb:1
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:05:28 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.3ms | GC: 1.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | GC: 2.9ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:07:05 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.0ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.2ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-10-12 23:07:17 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "commit"=>"<img alt=\"ログイン\" src=\"/assets/login.png\" />"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'ryuichi0108@icloud.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://127.0.0.1:3000/users/page
+Completed 302 Found in 149ms (ActiveRecord: 7.5ms (1 query, 0 cached) | GC: 3.7ms)
+
+
+Started GET "/users/page" for 127.0.0.1 at 2024-10-12 23:07:18 +0900
+Processing by UsersController#page as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/page.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.1ms | GC: 0.1ms)
+  Rendered users/page.html.erb within layouts/application (Duration: 6.2ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | GC: 0.1ms)
+Completed 200 OK in 16ms (Views: 9.7ms | ActiveRecord: 2.6ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2024-10-12 23:07:20 +0900
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 8ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-12 23:07:20 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 3.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 0.2ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:07:23 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 15.0ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | GC: 0.4ms)
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:07:43 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:09:23 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:09:40 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.1ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 0.1ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:09:53 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:09:57 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 31.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.1ms | GC: 0.0ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:11:34 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.1ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:11:46 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:12:16 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 0.1ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:12:31 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2024-10-12 23:12:36 +0900
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 8.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | GC: 0.8ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2024-10-12 23:12:50 +0900
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2024-10-12 23:14:21 +0900
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2024-10-12 23:14:58 +0900
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.1ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2024-10-12 23:15:47 +0900
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2024-10-12 23:16:30 +0900
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 9.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 13.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2024-10-12 23:16:45 +0900
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/password_resets/new" for 127.0.0.1 at 2024-10-12 23:17:13 +0900
+Processing by PasswordResetsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (Duration: 1.7ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.1ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-10-12 23:17:28 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "button"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'ryuichi0108@icloud.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://127.0.0.1:3000/users/page
+Completed 302 Found in 144ms (ActiveRecord: 6.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/users/page" for 127.0.0.1 at 2024-10-12 23:17:28 +0900
+Processing by UsersController#page as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/page.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 3.0ms | GC: 0.0ms)
+  Rendered users/page.html.erb within layouts/application (Duration: 5.0ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.1ms)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2024-10-12 23:17:30 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `current_user'
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mRecorder Load (0.3ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:22
+  [1m[36mFlightCategory Load (0.0ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:25
+  Rendered users/show.html.erb within layouts/application (Duration: 58.3ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 64.7ms | GC: 0.5ms)
+Completed 200 OK in 81ms (Views: 66.0ms | ActiveRecord: 1.8ms (5 queries, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/users/write_create" for 127.0.0.1 at 2024-10-12 23:17:32 +0900
+Processing by UsersController#write_create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/write_create.html.erb within layouts/application
+  [1m[36mRecorder Load (0.3ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."name" = ? LIMIT ?[0m  [["name", "ちち"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:8
+  [1m[36mRecorder Load (0.0ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."name" = ? LIMIT ?[0m  [["name", "おとうと"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:12
+  [1m[36mRecorder Load (0.0ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."name" = ? LIMIT ?[0m  [["name", "そふ"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:16
+  [1m[36mRecorder Load (0.0ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."name" = ? LIMIT ?[0m  [["name", "いもうと"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:25
+  [1m[36mRecorder Load (0.0ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."name" = ? LIMIT ?[0m  [["name", "はは"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:29
+  [1m[36mRecorder Load (0.2ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."name" = ? LIMIT ?[0m  [["name", "そぼ"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:33
+  [1m[36mFlightCategory Load (0.0ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."color" = ? LIMIT ?[0m  [["color", "ちゃいろ"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:41
+  [1m[36mFlightCategory Load (0.0ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."color" = ? LIMIT ?[0m  [["color", "みどりいろ"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:45
+  [1m[36mFlightCategory Load (0.0ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."color" = ? LIMIT ?[0m  [["color", "あお"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:49
+  [1m[36mFlightCategory Load (0.0ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."color" = ? LIMIT ?[0m  [["color", "ぴんく"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:56
+  [1m[36mFlightCategory Load (0.0ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."color" = ? LIMIT ?[0m  [["color", "きいろ"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:60
+  [1m[36mFlightCategory Load (0.0ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."color" = ? LIMIT ?[0m  [["color", "むらさき"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:64
+  Rendered users/write_create.html.erb within layouts/application (Duration: 48.0ms | GC: 3.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | GC: 3.9ms)
+Completed 200 OK in 80ms (Views: 52.5ms | ActiveRecord: 0.9ms (13 queries, 0 cached) | GC: 4.3ms)
+
+
+Started GET "/users/page" for 127.0.0.1 at 2024-10-12 23:17:37 +0900
+Processing by UsersController#page as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/page.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 4.4ms | GC: 0.0ms)
+  Rendered users/page.html.erb within layouts/application (Duration: 8.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2024-10-12 23:17:38 +0900
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 7ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-12 23:17:38 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | GC: 5.7ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 5.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-12 23:17:43 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 25.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-12 23:18:09 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 13.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | GC: 0.8ms)
+Completed 200 OK in 23ms (Views: 18.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-12 23:20:23 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.4ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | GC: 0.4ms)
+Completed 200 OK in 38ms (Views: 12.5ms | ActiveRecord: 1.7ms (0 queries, 0 cached) | GC: 9.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-12 23:20:35 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | GC: 5.1ms)
+Completed 200 OK in 33ms (Views: 17.7ms | ActiveRecord: 1.3ms (0 queries, 0 cached) | GC: 5.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-12 23:20:43 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.9ms)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-12 23:22:30 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.3ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.5ms)
+Completed 200 OK in 27ms (Views: 9.5ms | ActiveRecord: 0.8ms (0 queries, 0 cached) | GC: 5.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:22:44 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-12 23:23:39 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | GC: 0.3ms)
+Completed 200 OK in 20ms (Views: 6.8ms | ActiveRecord: 1.3ms (0 queries, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:25:21 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 21.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | GC: 0.6ms)
+Completed 200 OK in 35ms (Views: 30.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.9ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-10-12 23:25:25 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"[FILTERED]", "password"=>"[FILTERED]", "button"=>""}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'ryuichi0108@icloud.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://127.0.0.1:3000/users/page
+Completed 302 Found in 157ms (ActiveRecord: 2.4ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/users/page" for 127.0.0.1 at 2024-10-12 23:25:26 +0900
+Processing by UsersController#page as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/page.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered users/page.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2024-10-12 23:25:27 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `current_user'
+  [1m[36mRecord Load (0.2ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mRecorder Load (0.0ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:22
+  [1m[36mFlightCategory Load (0.0ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:25
+  Rendered users/show.html.erb within layouts/application (Duration: 29.1ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | GC: 1.1ms)
+Completed 200 OK in 53ms (Views: 30.1ms | ActiveRecord: 0.7ms (5 queries, 0 cached) | GC: 9.1ms)
+
+
+Started GET "/records/30" for 127.0.0.1 at 2024-10-12 23:25:30 +0900
+Processing by RecordsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/records_controller.rb:19:in `show'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/records_controller.rb:20:in `show'
+  [1m[36mRecord Destroy (3.3ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = ?[0m  [["id", 30]]
+  ↳ app/controllers/records_controller.rb:20:in `show'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/records_controller.rb:20:in `show'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `current_user'
+Redirected to http://127.0.0.1:3000/users/10
+Completed 302 Found in 31ms (ActiveRecord: 5.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2024-10-12 23:25:30 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `current_user'
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.1ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/write_create" for 127.0.0.1 at 2024-10-12 23:25:32 +0900
+Processing by UsersController#write_create as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/write_create.html.erb within layouts/application
+  [1m[36mRecorder Load (0.2ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."name" = ? LIMIT ?[0m  [["name", "ちち"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:8
+  [1m[36mRecorder Load (0.1ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."name" = ? LIMIT ?[0m  [["name", "おとうと"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:12
+  [1m[36mRecorder Load (0.0ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."name" = ? LIMIT ?[0m  [["name", "そふ"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:16
+  [1m[36mRecorder Load (0.0ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."name" = ? LIMIT ?[0m  [["name", "いもうと"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:25
+  [1m[36mRecorder Load (0.0ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."name" = ? LIMIT ?[0m  [["name", "はは"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:29
+  [1m[36mRecorder Load (0.0ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."name" = ? LIMIT ?[0m  [["name", "そぼ"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:33
+  [1m[36mFlightCategory Load (0.1ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."color" = ? LIMIT ?[0m  [["color", "ちゃいろ"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:41
+  [1m[36mFlightCategory Load (0.0ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."color" = ? LIMIT ?[0m  [["color", "みどりいろ"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:45
+  [1m[36mFlightCategory Load (0.0ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."color" = ? LIMIT ?[0m  [["color", "あお"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:49
+  [1m[36mFlightCategory Load (0.0ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."color" = ? LIMIT ?[0m  [["color", "ぴんく"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:56
+  [1m[36mFlightCategory Load (0.0ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."color" = ? LIMIT ?[0m  [["color", "きいろ"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:60
+  [1m[36mFlightCategory Load (0.0ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."color" = ? LIMIT ?[0m  [["color", "むらさき"], ["LIMIT", 1]]
+  ↳ app/views/users/write_create.html.erb:64
+  Rendered users/write_create.html.erb within layouts/application (Duration: 39.9ms | GC: 6.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 40.8ms | GC: 6.4ms)
+Completed 200 OK in 49ms (Views: 41.6ms | ActiveRecord: 0.7ms (13 queries, 0 cached) | GC: 6.4ms)
+
+
+Started POST "/records" for 127.0.0.1 at 2024-10-12 23:25:41 +0900
+Processing by RecordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "record"=>{"user_id"=>"10", "recorder_id"=>"6", "flight_category_id"=>"1", "has_urinated"=>"1", "breastmilk_amount"=>"2", "remarks"=>"sss"}, "button"=>""}
+#<ActionController::Parameters {"authenticity_token"=>"s4sXqHBLcKdvs6bPPNrIAxFJ06rZjpKqsOa2HCcOKzEzgjU3_9f3D6sKrywkzKiUMnw0oBevkDtGc_w9Rkohuw", "record"=>{"user_id"=>"10", "recorder_id"=>"6", "flight_category_id"=>"1", "has_urinated"=>"1", "breastmilk_amount"=>"2", "remarks"=>"sss"}, "button"=>"", "controller"=>"records", "action"=>"create"} permitted: false>
+[31mUnpermitted parameter: :user_id. Context: { controller: RecordsController, action: create, request: #<ActionDispatch::Request:0x0000000142cf8c10>, params: {"authenticity_token"=>"[FILTERED]", "record"=>{"user_id"=>"10", "recorder_id"=>"6", "flight_category_id"=>"1", "has_urinated"=>"1", "breastmilk_amount"=>"2", "remarks"=>"sss"}, "button"=>"", "controller"=>"records", "action"=>"create"} }[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `current_user'
+  [1m[36mCACHE User Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/records_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/records_controller.rb:10:in `create'
+  [1m[36mFlightCategory Load (0.7ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/records_controller.rb:10:in `create'
+  [1m[36mRecord Create (1.1ms)[0m  [1m[32mINSERT INTO "records" ("user_id", "breastmilk_amount", "has_urinated", "flight_category_id", "remarks", "recorder_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["user_id", 10], ["breastmilk_amount", 2], ["has_urinated", 1], ["flight_category_id", 1], ["remarks", "sss"], ["recorder_id", 6], ["created_at", "2024-10-12 14:25:41.034357"], ["updated_at", "2024-10-12 14:25:41.034357"]]
+  ↳ app/controllers/records_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/records_controller.rb:10:in `create'
+Redirected to http://127.0.0.1:3000/users/10
+Completed 302 Found in 45ms (ActiveRecord: 2.1ms (4 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2024-10-12 23:25:41 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `current_user'
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mRecorder Load (0.0ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:22
+  [1m[36mFlightCategory Load (0.0ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:25
+  Rendered users/show.html.erb within layouts/application (Duration: 7.5ms | GC: 3.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | GC: 3.7ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms (5 queries, 0 cached) | GC: 3.7ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2024-10-12 23:25:49 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `current_user'
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/users/show.html.erb:16
+  [1m[36mRecorder Load (0.1ms)[0m  [1m[34mSELECT "recorders".* FROM "recorders" WHERE "recorders"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:22
+  [1m[36mFlightCategory Load (0.0ms)[0m  [1m[34mSELECT "flight_categories".* FROM "flight_categories" WHERE "flight_categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:25
+  Rendered users/show.html.erb within layouts/application (Duration: 20.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | GC: 0.5ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.2ms (5 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2024-10-12 23:25:53 +0900
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `current_user'
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 4ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-12 23:25:53 +0900
+Processing by TopController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/index.html.erb within layouts/application
+  Rendered top/index.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:26:11 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 18.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-12 23:26:14 +0900
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 7.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-10-12 23:26:15 +0900
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 7.8ms | GC: 2.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | GC: 2.3ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.3ms)
+
+

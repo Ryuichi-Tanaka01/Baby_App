@@ -1,8 +1,22 @@
-<%= form_with url: login_path do |f|%>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    <%= f.submit "ログイン" %>
-<% end %>
-<%= link_to 'passwordをお忘れの方はコチラ', new_password_reset_path %>
+<%= form_with url: login_path, html: { style: "margin-top: 150px;" } do |f| %>
+    <div style="text-align: center; margin-bottom: 20px;">
+      <%= f.label :メールアドレス, style: "font-size: 20px;" %><br>
+      <%= f.email_field :email, style: "font-size: 20px; width: 300px; padding: 10px; margin-top: 20px;" %>
+    </div>
+  
+    <div style="text-align: center; margin-bottom: 20px;">
+      <%= f.label :パスワード, style: "font-size: 20px;" %><br>
+      <%= f.password_field :password, style: "font-size: 20px; width: 300px; padding: 10px;  margin-top: 20px;" %>
+    </div>
+  
+    <div class="button-create" style="text-align: center; margin-bottom: 20px;">
+      <%= button_tag(type: 'submit', style: "background: none; border: none; padding: 0;") do %>
+        <%= image_tag("login.png", alt: "ログイン", style: "width: 130px; height: auto;") %>
+      <% end %>
+    </div>
+  <% end %>
+  
+  <div style="text-align: center;">
+    <%= link_to 'パスワードをお忘れの方はこちら', new_password_reset_path %>
+  </div>
+  
