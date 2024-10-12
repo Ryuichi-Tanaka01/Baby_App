@@ -1,54 +1,53 @@
 <%= form_with(model: @record, url: records_path, local: true) do |form| %>
   <%= form.hidden_field :user_id, value: current_user.id %>
+
   <div class="write_center">
     <!-- recorder_idのhuman group -->
     <div class="human group">
       <div class="radio-image-group">
         <%= image_tag("chichi", size: "100") %>
-        <!-- name: "record[recorder_id]" として record にネスト -->
-        <%= form.radio_button 'record[recorder_id]', Recorder.find_by(name: "ちち").id %>
+        <%= form.radio_button :recorder_id, Recorder.find_by(name: "ちち").id %>
       </div>
       <div class="radio-image-group">
         <%= image_tag("otouto", size: "100") %>
-        <%= form.radio_button 'record[recorder_id]', Recorder.find_by(name: "おとうと").id %>
+        <%= form.radio_button :recorder_id, Recorder.find_by(name: "おとうと").id %>
       </div>
       <div class="radio-image-group">
         <%= image_tag("sohu", size: "100") %>
-        <%= form.radio_button 'record[recorder_id]', Recorder.find_by(name: "そふ").id %>
+        <%= form.radio_button :recorder_id, Recorder.find_by(name: "そふ").id %>
       </div>
       <div class="radio-image-group">
         <%= image_tag("imouto", size: "100") %>
-        <%= form.radio_button 'record[recorder_id]', Recorder.find_by(name: "いもうと").id %>
+        <%= form.radio_button :recorder_id, Recorder.find_by(name: "いもうと").id %>
       </div>
     </div>
 
     <div class="back-color group">
       <div class="radio-image-group2">
         <%= image_tag("cha", size: "100") %>
-        <!-- name: "record[flight_category_id]" として record にネスト -->
-        <%= form.radio_button 'record[flight_category_id]', FlightCategory.find_by(color: "ちゃいろ").id %>
+        <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "ちゃいろ").id %>
       </div>
       <div class="radio-image-group2">
         <%= image_tag("green", size: "100") %>
-        <%= form.radio_button 'record[flight_category_id]', FlightCategory.find_by(color: "みどりいろ").id %>
+        <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "みどりいろ").id %>
       </div>
       <div class="radio-image-group2">
         <%= image_tag("ao", size: "100") %>
-        <%= form.radio_button 'record[flight_category_id]', FlightCategory.find_by(color: "あお").id %>
+        <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "あお").id %>
       </div>
     </div>
     <div class="back-color group">
       <div class="radio-image-group2">
         <%= image_tag("pink", size: "100") %>
-        <%= form.radio_button 'record[flight_category_id]', FlightCategory.find_by(color: "ぴんく").id %>
+        <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "ぴんく").id %>
       </div>
       <div class="radio-image-group2">
         <%= image_tag("yellow", size: "100") %>
-        <%= form.radio_button 'record[flight_category_id]', FlightCategory.find_by(color: "きいろ").id %>
+        <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "きいろ").id %>
       </div>
       <div class="radio-image-group2">
         <%= image_tag("murasaki", size: "100") %>
-        <%= form.radio_button 'record[flight_category_id]', FlightCategory.find_by(color: "むらさき").id %>
+        <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "むらさき").id %>
       </div>
     </div>
 

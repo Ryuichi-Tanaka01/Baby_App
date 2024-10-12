@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    @record = Record.all
+    @records = Record.all
   end
 
   private
