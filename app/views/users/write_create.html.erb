@@ -64,17 +64,22 @@
       <%= form.radio_button :flight_category_id, FlightCategory.find_by(color: "むらさき").id %>
     </div>
   </div>
+  <div style="text-align: center;">
   <div class="form-group">
-  <%= form.label :has_urinated, "おしっこをしたかどうか" %>
-  <%= form.check_box :has_urinated %>
-</div>
+    <%= form.label :has_urinated, "おしっこした？" %>
+    <%= form.check_box :has_urinated %>
+  </div>
+  
   <div class="text_form">
-  <%= form.label :breastmilk_amount, "ミルク量" %>
-  <%= form.number_field :breastmilk_amount, placeholder: "ミルク量を入力", min: 0, step: 1 %>
-</div>
+    <%= form.label :breastmilk_amount, "ミルク量" %>
+    <%= form.number_field :breastmilk_amount, placeholder: "ミルク量を入力", min: 0, step: 1 %>
+  </div>
+  
   <div class="text_form">
-  <%= form.text_field :remarks, size: 50, placeholder: "備考" %>
+    <%= form.text_field :remarks, size: 30, placeholder: "備考" %>
+  </div>
 </div>
+
 
   <div class="button-create">
     <%= button_tag(type: 'submit', style: "background: none; border: none; padding: 0;") do %>
