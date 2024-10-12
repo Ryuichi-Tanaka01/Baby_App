@@ -1,25 +1,26 @@
-<%= render 'shared/header' %>
 <% if logged_in? %>
-  <div>
-    <table>
-      <tbody>
+  <div class="styled-table-container"> <!-- クラスを追加 -->
+    <table class="styled-table">
+      <thead>
         <tr>
-          <td>日時</td>
-          <td>記録した人</td>
-          <td>うんち</td>
-          <td>みるく</td>
-          <td>おしっこ</td>
-          <td>備考</td>
-          <td></td>
+          <th>日時</th>
+          <th>記録した人</th>
+          <th>うんち</th>
+          <th>みるく</th>
+          <th>おしっこ</th>
+          <th>備考</th>
+          <th></th>
         </tr>
-        <% @record.each do |record| %>
+      </thead>
+      <tbody>
+        <% @records.each do |record| %>
           <tr>
-            <td><%= record.created_at.strftime('%Y/%m/%d %H:%M:')%></td>
+            <td><%= record.created_at.strftime('%Y/%m/%d %H:%M') %></td>
             <td><%= record.recorder.name %></td>
+            <td><%= record.flight_category.color %></td>
           </tr>
         <% end %>
       </tbody>
     </table>
   </div>
 <% end %>
-</div>
