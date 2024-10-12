@@ -1,23 +1,29 @@
 <% if logged_in? %>
-  <div class="styled-table-container"> <!-- クラスを追加 -->
-    <table class="styled-table">
-      <thead>
+  <div style="margin: 20px;">
+    <table style="width: 100%; border-collapse: collapse; background-color: white; margin: 0 auto;">
+      <thead style="background-color: #f0f8ff;">
         <tr>
-          <th>日時</th>
-          <th>記録した人</th>
-          <th>うんち</th>
-          <th>みるく</th>
-          <th>おしっこ</th>
-          <th>備考</th>
-          <th></th>
+          <th style="padding: 12px; text-align: left; border: 1px solid lightblue;">日時</th> <!-- 水色の罫線 -->
+          <th style="padding: 12px; text-align: left; border: 1px solid lightblue;">記録した人</th>
+          <th style="padding: 12px; text-align: left; border: 1px solid lightblue;">うんち</th>
+          <th style="padding: 12px; text-align: left; border: 1px solid lightblue;">みるく</th>
+          <th style="padding: 12px; text-align: left; border: 1px solid lightblue;">おしっこ</th>
+          <th style="padding: 12px; text-align: left; border: 1px solid lightblue;">備考</th>
+          <th style="padding: 12px; text-align: left; border: 1px solid lightblue;"></th>
         </tr>
       </thead>
       <tbody>
         <% @records.each do |record| %>
           <tr>
-            <td><%= record.created_at.strftime('%Y/%m/%d %H:%M') %></td>
-            <td><%= record.recorder.name %></td>
-            <td><%= record.flight_category.color %></td>
+            <td style="padding: 12px; text-align: left; border: 1px solid lightblue;">
+              <%= record.created_at.strftime('%Y/%m/%d %H:%M') %>
+            </td>
+            <td style="padding: 12px; text-align: left; border: 1px solid lightblue;">
+              <%= record.recorder.name %>
+            </td>
+            <td style="padding: 12px; text-align: left; border: 1px solid lightblue;">
+              <%= record.flight_category.color %>
+            </td>
           </tr>
         <% end %>
       </tbody>
