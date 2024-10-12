@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     @record = Record.new(recorder_id: user_id)
   
     if @record.save
-      redirect_to users_path, notice: 'Record was successfully created.'
+      redirect_to user_path(current_user.id)
     else
       render :write_create 
     end

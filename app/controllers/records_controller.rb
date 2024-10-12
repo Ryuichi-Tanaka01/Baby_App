@@ -8,13 +8,18 @@ class RecordsController < ApplicationController
       @record = Record.new(record_params)
     
       if @record.save
-        redirect_to page_users_path
+        redirect_to user_path(current_user.id)
       else
         flash.now[:alert] = @record.errors.full_messages.to_sentence
         render :user_path
       end
     end
     
+    def show
+      @record = Record.find(params[:id])
+      @record.destroy
+      redirect_to user_path(current_user.id)
+    end
   
     private
   

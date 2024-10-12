@@ -3,7 +3,7 @@
     <table style="width: 100%; border-collapse: collapse; background-color: white; margin: 0 auto;">
       <thead style="background-color: #f0f8ff;">
         <tr>
-          <th style="padding: 12px; text-align: left; border: 1px solid lightblue;">日時</th> <!-- 水色の罫線 -->
+          <th style="padding: 12px; text-align: left; border: 1px solid lightblue;">日時</th>
           <th style="padding: 12px; text-align: left; border: 1px solid lightblue;">記録した人</th>
           <th style="padding: 12px; text-align: left; border: 1px solid lightblue;">うんち</th>
           <th style="padding: 12px; text-align: left; border: 1px solid lightblue;">みるく</th>
@@ -33,6 +33,9 @@
             <td style="padding: 12px; text-align: left; border: 1px solid lightblue;">
               <%= record.remarks %>
             </td>
+            <td style="padding: 12px; text-align: left; border: 1px solid lightblue;">
+            <%= link_to '削除', record_path(record), method: :delete, data: { confirm: '本当に削除しますか？' }, style: "color: blue;" %>
+          </td>
           </tr>
         <% end %>
       </tbody>
