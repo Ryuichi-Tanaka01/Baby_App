@@ -14,6 +14,4 @@ class SessionsController < ApplicationController
     logout
     redirect_to root_path, status: :see_other
   end
-  def newpassword
-  end
 end

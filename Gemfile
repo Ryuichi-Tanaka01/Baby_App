@@ -30,10 +30,14 @@ group :development do
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
-
+group :development, :test do
+  gem 'rubocop', require: false
+end
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
-
+group :development do
+  gem 'ruby-lsp', github: 'Shopify/ruby-lsp'
+end
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
