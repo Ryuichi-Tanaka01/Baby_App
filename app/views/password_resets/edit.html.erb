@@ -1,11 +1,22 @@
-<h3>パスワード再設定</h3>
-<%= form_with model: @user, url: password_reset_path(@token) do |f| %>
-    <%= render 'shared/error_message', object: f.object %>
-	<%= f.label :email %>
-    <%= @user.email %>
+<div style="text-align: center;">
+  <h3>パスワード再設定</h3>
+  <%= form_with model: @user, url: password_reset_path(@token), local: true do |f| %>
+    <div>
+      <%= render 'shared/error_message', object: f.object %>
+    </div>
 
-    <%= f.label :password %>
-    <%= f.password_field :password %>
+    <div style="margin-top: 20px;">
+      <%= f.label :メールアドレス %><br>
+      <%= @user.email %>
+    </div>
 
-    <%= f.submit 'リセット' %>
-<% end %>
+    <div style="margin-top: 20px;">
+      <%= f.label :パスワード %><br>
+      <%= f.password_field :password, style: "width: 150px;" %>
+    </div>
+
+    <div style="margin-top: 20px;">
+      <%= f.submit 'リセット', style: "width: 100px; padding: 10px;" %>
+    </div>
+  <% end %>
+</div>
