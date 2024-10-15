@@ -15,7 +15,13 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
-  <body>  
+  <body>
+    <% flash.each do |key, message| %>
+      <div class="alert alert-danger<%= key %>" style="padding: 12px; margin: 10px; border: 1px solid; border-radius: 5px;">
+        <%= message %>
+      </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

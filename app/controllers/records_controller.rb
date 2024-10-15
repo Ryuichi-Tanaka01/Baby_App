@@ -10,8 +10,8 @@ class RecordsController < ApplicationController
       if @record.save
         redirect_to user_path(current_user.id)
       else
-        flash.now[:alert] = @record.errors.full_messages.to_sentence
-        render :user_path
+        flash.now[:alert] = '記入者を選んでください'
+        render 'users/write_create'
       end
     end
     

@@ -6,6 +6,7 @@ body {
     margin: 0;
     height: 100vh;
     position: relative;
+    
 }
 
 /* コンテナ */
@@ -84,3 +85,15 @@ body {
 .header_user_name {
     margin: 10px;
 }
+
+.alert {
+    background-color: white; 
+    color: red; 
+    padding: 10px; 
+    border: 1px solid red; 
+    margin: 10px 0; 
+
+    border-radius: 5px; 
+    text-align: center;
+  }
+  

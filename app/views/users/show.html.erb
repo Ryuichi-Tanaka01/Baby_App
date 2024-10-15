@@ -23,7 +23,7 @@
               <%= record.recorder.name %>
             </td>
             <td style="padding: 12px; text-align: left; border: 1px solid lightblue;">
-              <%= record.flight_category.color %>
+              <%= record.flight_category ? record.flight_category.color : '' %>
             </td>
             <td style="padding: 12px; text-align: left; border: 1px solid lightblue;">
               <%= record.breastmilk_amount%>

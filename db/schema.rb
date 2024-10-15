@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_08_000519) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_15_121456) do
   create_table "flight_categories", force: :cascade do |t|
     t.string "color"
     t.datetime "created_at", null: false
@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_08_000519) do
     t.integer "user_id", null: false
     t.integer "breastmilk_amount"
     t.boolean "has_urinated"
-    t.integer "flight_category_id", null: false
+    t.integer "flight_category_id"
     t.string "remarks", limit: 255
     t.integer "recorder_id"
     t.datetime "created_at", null: false
