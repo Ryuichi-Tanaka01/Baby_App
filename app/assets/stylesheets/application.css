@@ -86,14 +86,3 @@ body {
     margin: 10px;
 }
 
-.alert {
-    background-color: white; 
-    color: red; 
-    padding: 10px; 
-    border: 1px solid red; 
-    margin: 10px 0; 
-
-    border-radius: 5px; 
-    text-align: center;
-  }
-  
