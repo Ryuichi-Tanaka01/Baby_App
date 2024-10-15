@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to "/users/page"
     else
+      flash.now[:alert] = '入力された内容が正しくありません'
       render :new
     end
   end

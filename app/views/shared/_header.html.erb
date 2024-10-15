@@ -4,7 +4,7 @@
   </div>
 
   <% if logged_in? %>
-  <h3><%= @user.name %>さん、こんにちは！今日も記録をつけていきましょう!</h3>
+  <h3><%= current_user.name %>さん、こんにちは！今日も記録をつけていきましょう!</h3>
     <%= link_to image_tag('logout.png', class: "image-size"), logout_path, method: :delete, class: "logout-button" %>
   <% end %>
 </div>
