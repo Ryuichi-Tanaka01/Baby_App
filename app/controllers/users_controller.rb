@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to "/users/page"
     else
-      flash.now[:alert] = 'すでに使われている項目があります'
+      flash.now[:alert] = '入力エラーが発生しました'
       render :new
     end
   end
