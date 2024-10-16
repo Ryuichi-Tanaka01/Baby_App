@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to "/users/page"
     else
-      flash.now[:alert] = 'このメールアドレスはすでに使われています'
+      flash.now[:alert] = 'すでに使われている項目があります'
       render :new
     end
   end
